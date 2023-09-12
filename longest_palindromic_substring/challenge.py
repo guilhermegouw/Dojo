@@ -14,17 +14,13 @@ substrings by 1 char each time.
 
 
 def longestPalindromicSubstring(string):
-    longest_palindromic_substring = ''
-    for i in range(len(string)):
-        for j in range(len(string), i, -1):
-            substring = string[i:j]
-            if len(substring) > len(longest_palindromic_substring) and is_palindrome(substring):
-                longest_palindromic_substring = substring
-    return longest_palindromic_substring
+    substring_len = len(string)
+    while substring_len > 0:
+        for i in range(len(string) - substring_len + 1):
+            substring = string[i:i + substring_len]
+            if is_palindrome(substring):
+                return substring
+        substring_len -= 1
 
 def is_palindrome(string):
     return string == string[::-1]
-
-
-if __name__ == '__main__':
-    longestPalindromicSubstring("abaxyzzyxf")
