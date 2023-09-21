@@ -1,0 +1,49 @@
+The Array: The Foundational Data Structure
+
+4 - Operations:
+
+READ: Looking up a value in a particular index.
+    
+    - Read takes only 1 step: This is because the computer has the ability to
+    jump to any particular index in the Array and peer inside.
+
+
+SEARCHING: Looking to see whether a particular value exists within an array and
+if so, at which index it's located.
+    
+    - Reading from an array is fast, since a computer can jump immediately to
+    any index and discover the value contained there. Searching is tedious,
+    since the computer has no way to jump to a particular value.
+    - A computer has immediate access to all of its memory addresses, but has 
+    no idea offhand what values are contained at each memory address. 
+
+
+INSERTION: 
+
+    - The cost for inserting a value in an array, depends of the position the
+    value is been inserted.
+    For example:
+    | 'a' | 'b' | 'c' | 'd' | You want to insert the letter 'e' in the end of 
+    the array.
+    | 'a' | 'b' | 'c' | 'd' | 'e' | This would cost only one step, since the 
+    computer knows where the computer stored the begin of the array and its 
+    length. So, it will only insert it on the next slot. But, if you want to 
+    insert the letter 'e' in the index 2. 
+    | 'a' | 'b' | 'c' | 'd' |     | 1
+    | 'a' | 'b' | 'c' |     | 'd' | 2
+    | 'a' | 'b' |     | 'c' | 'd' | 3
+    | 'a' | 'b' | 'e' | 'c' | 'd' | 4
+    It would tak 4 steps.
+
+DELETING: Is the process of eliminating the value at a particular index.
+
+    - The cost of that operation looks like the inserting.
+    Example:
+
+    | 'a' | 'b' | 'c' | 'd' | 'e' | You want to delete the letter 'e', it would
+    take only one step to do it. But, if you want to delete the letter 'c'.
+    | 'a' | 'b' |     | 'd' | 'e' | 1
+    | 'a' | 'b' | 'd' |     | 'e' | 2
+    | 'a' | 'b' | 'd' | 'e' |       3
+
+    3 step one for deleting and other 2 to rearrange it.
