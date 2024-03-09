@@ -1,5 +1,5 @@
 """
-Function receives an array of numbers and return the greatest of them. 
+Function receives an array of numbers and return the greatest of them.
 """
 
 

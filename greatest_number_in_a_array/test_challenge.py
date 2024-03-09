@@ -4,7 +4,6 @@ from challenge import get_greatest_number
 
 
 class TestGetGreatestNumber(unittest.TestCase):
-
     def test_single_element_array(self):
         self.assertEqual(get_greatest_number([1]), 1)
 
@@ -18,5 +17,5 @@ class TestGetGreatestNumber(unittest.TestCase):
         self.assertEqual(get_greatest_number([4, 1, 2, 3]), 4)
 
 
-if __name__=='__main__':
+if __name__ == "__main__":
     unittest.main()

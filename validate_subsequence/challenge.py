@@ -1,6 +1,8 @@
 """
 
 """
+
+
 def isValidSubsequence(array, sequence):
     for item in sequence:
         if item in array:
