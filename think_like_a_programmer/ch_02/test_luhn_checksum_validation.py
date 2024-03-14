@@ -1,6 +1,6 @@
 import pytest
 
-from ch_02.luhn_checksum_validation import should_double, get_doubled_values, luhn_checksum_validation
+from think_like_a_programmer.ch_02.luhn_checksum_validation import should_double, get_doubled_values, luhn_checksum_validation
 
 
 @pytest.mark.parametrize(
