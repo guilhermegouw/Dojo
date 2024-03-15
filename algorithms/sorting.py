@@ -113,7 +113,7 @@ def insertion_sort_book(unsorted):
                 position -= 1
             else:
                 break
-    unsorted[position + 1] = temp
+        unsorted[position + 1] = temp
     return unsorted
 
 
@@ -122,17 +122,29 @@ Insertion sort book
 
 0 | 1 | 2 | 3 | 4
 -----------------
-4 | 2 | 7 | 1 | 3 => temp(idx 1) = 2: idx 0 > temp
-                                      => temp = idx 0
-                                      => idx 0 = temp
-2 | 4 | 7 | 1 | 3 => temp(idx 2) = 7: idx 1 < temp
-1 | 2 | 4 | 7 | 3 => temp(idx 3) = 1: idx 2 > temp => idx 3 = idx 2,
-                                      idx 1 > temp => idx 2 = idx 1,
-                                      idx 0 > temp => idx 1 = idx 0,
-                                      idx 0 = temp
-1 | 2 | 3 | 4 | 7 => temp(idx 4) = 3: idx 3 < temp => idx 4 = idx 3,
-                                      idx 2 > temp => idx 3 = idx 2,
-                                      idx 1 < temp
+4 | 2 | 7 | 1 | 3 => temp(idx 1) = 2: 
+                     idx 0 (4) > temp (2)
+                     => idx 1 = idx 0 (4)
+                     => idx 0 = temp
+2 | 4 | 7 | 1 | 3 => temp(idx 2) = 7: 
+                     idx 1 (4) < temp (7)
+                     => idx 2 (7) = idx 1 (4)
+                     idx 0 (2) < temp (7)
+                     => idx 1 = idx 0 (2)
+                     => idx 0 = temp
+1 | 2 | 4 | 7 | 3 => temp(idx 3) = 1 
+                     idx 2 (4) > temp (1) 
+                     => idx 3 = idx 2 (4)
+                     idx 1 (2) > temp (1) 
+                     => idx 2 = idx 1 (2)
+                     idx 0 > temp 
+                     idx 0 = temp
+1 | 2 | 3 | 4 | 7 => temp(idx 4) = 3 
+                     idx 3 (7) > temp (3) 
+                     => idx 4 = idx 3 (7)
+                     idx 2 (4) > temp 
+                     => idx 3 = idx 2 (4)
+                     idx 1 (2) > temp
 """
 
 
