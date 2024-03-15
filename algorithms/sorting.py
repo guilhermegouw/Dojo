@@ -139,6 +139,7 @@ Insertion sort book
 2 |   | 4 | 7 | 3    idx 0 (2) > temp (1)
   | 2 | 4 | 7 | 3    => idx 1 = idx 0 (2)
 1 | 2 | 4 | 7 | 3    idx 0 = temp
+
 1 | 2 | 4 | 7 | 3 => temp(idx 4) = 3 
 1 | 2 | 4 | 7 |      idx 3 (7) > temp (3) 
 1 | 2 | 4 |   | 7    => idx 4 = idx 3 (7)
