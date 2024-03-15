@@ -105,10 +105,14 @@ Insertion sort
 def insertion_sort_book(unsorted):
     for i in range(1, len(unsorted)):
         temp = unsorted[i]
-        while i > 0 and unsorted[i - 1] > temp:
-            unsorted[i] = unsorted[i - 1]
-            unsorted[i - 1] = temp
-            i -= 1
+        position = i - 1
+        while position >= 0:
+            if unsorted[position] > temp:
+                unsorted[position + 1] = unsorted[position]
+                position -= 1
+            else:
+                break
+    unsorted[position + 1] = temp
     return unsorted
 
 
