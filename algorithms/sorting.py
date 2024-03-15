@@ -122,29 +122,29 @@ Insertion sort book
 
 0 | 1 | 2 | 3 | 4
 -----------------
-4 | 2 | 7 | 1 | 3 => temp(idx 1) = 2: 
-                     idx 0 (4) > temp (2)
-                     => idx 1 = idx 0 (4)
-                     => idx 0 = temp
+4 | 2 | 7 | 1 | 3 => temp(idx 1) = 2:
+4 |   | 7 | 1 | 3    idx 0 (4) > temp (2)
+  | 4 | 7 | 1 | 3    => idx 1 = idx 0 (4)
+2 | 4 | 7 | 1 | 3    => idx 0 = temp
+                     
 2 | 4 | 7 | 1 | 3 => temp(idx 2) = 7: 
-                     idx 1 (4) < temp (7)
-                     => idx 2 (7) = idx 1 (4)
-                     idx 0 (2) < temp (7)
-                     => idx 1 = idx 0 (2)
-                     => idx 0 = temp
-1 | 2 | 4 | 7 | 3 => temp(idx 3) = 1 
-                     idx 2 (4) > temp (1) 
-                     => idx 3 = idx 2 (4)
-                     idx 1 (2) > temp (1) 
-                     => idx 2 = idx 1 (2)
-                     idx 0 > temp 
-                     idx 0 = temp
-1 | 2 | 3 | 4 | 7 => temp(idx 4) = 3 
-                     idx 3 (7) > temp (3) 
-                     => idx 4 = idx 3 (7)
-                     idx 2 (4) > temp 
-                     => idx 3 = idx 2 (4)
-                     idx 1 (2) > temp
+2 | 4 |   | 1 | 3   idx 1 (4) > temp (7)
+                    idx 0 (2) > temp (7)
+
+2 | 4 | 7 | 1 | 3 => temp(idx 3) = 1 
+2 | 4 | 7 |   | 3    idx 2 (7) > temp (1) 
+2 | 4 |   | 7 | 3    => idx 3 = idx 2 (7)
+2 | 4 |   | 7 | 3    idx 1 (4) > temp (1) 
+2 |   | 4 | 7 | 3    => idx 2 = idx 1 (2)
+2 |   | 4 | 7 | 3    idx 0 (2) > temp (1)
+  | 2 | 4 | 7 | 3    => idx 1 = idx 0 (2)
+1 | 2 | 4 | 7 | 3    idx 0 = temp
+1 | 2 | 4 | 7 | 3 => temp(idx 4) = 3 
+1 | 2 | 4 | 7 |      idx 3 (7) > temp (3) 
+1 | 2 | 4 |   | 7    => idx 4 = idx 3 (7)
+1 | 2 | 4 |   | 7    idx 2 (4) > temp (3)
+1 | 2 |   | 4 | 7    => idx 3 = idx 2 (4)
+1 | 2 | 3 | 4 | 7    idx 2  > temp (3)
 """
 
 
