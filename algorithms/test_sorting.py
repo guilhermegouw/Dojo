@@ -1,6 +1,6 @@
 import pytest
 
-from sorting import bubble_sort, my_sort, selection_sort, insertion_sort_book
+from .sorting import bubble_sort, my_sort, selection_sort, insertion_sort_book
 
 
 @pytest.mark.parametrize(
@@ -29,6 +29,7 @@ def test_bubble_sort(input_list, result):
 )
 def test_my_sort(input_list, result):
     assert my_sort(input_list) == result
+
 
 @pytest.mark.parametrize(
     "input_list, result",
