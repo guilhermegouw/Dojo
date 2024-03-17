@@ -44,16 +44,19 @@ Output
 If Lena can organize the boxes, output YES; otherwise, output NO.
 """
 
+
 def can_organize(boxes, *contents):
-    organizable = 'YES'
+    organizable = "YES"
     for i in range(1, boxes):
-        if (contents[i][-contents[i][0]] < contents[i-1][-1]
-            and contents[i][-1] > contents[i-1][-contents[i-1][0]]):
-            organizable = 'NO'
+        if (
+            contents[i][-contents[i][0]] < contents[i - 1][-1]
+            and contents[i][-1] > contents[i - 1][-contents[i - 1][0]]
+        ):
+            organizable = "NO"
             return organizable
-    
+
     return organizable
 
 
-if __name__=='__main__':
+if __name__ == "__main__":
     can_organize(3, (2, 1, 2), (2, 3, 6), (1, 5))
