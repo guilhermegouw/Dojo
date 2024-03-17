@@ -8,7 +8,7 @@ containing the following string combinations:
 'ca', 'cb', 'cd', 'da', 'db', 'dc'
 ]
 """
-
+import string
 import time
 
 
@@ -31,34 +31,7 @@ def book_word_builder(array):
 
 
 if __name__ == "__main__":
-    array = [
-        "a",
-        "b",
-        "c",
-        "d",
-        "e",
-        "f",
-        "g",
-        "h",
-        "i",
-        "j",
-        "k",
-        "l",
-        "m",
-        "n",
-        "o",
-        "p",
-        "q",
-        "r",
-        "s",
-        "t",
-        "u",
-        "v",
-        "w",
-        "x",
-        "y",
-        "z",
-    ]
+    array = list(string.ascii_lowercase)
     start = time.time()
     word_builder(array)
     print(time.time() - start)
