@@ -1,6 +1,6 @@
 import pytest
 
-from .challenge import word_builder, book_word_builder
+from .challenge import word_builder, book_word_builder, word_builder_3_chars
 
 
 @pytest.mark.parametrize(
@@ -119,3 +119,16 @@ def test_word_builder(array, expected):
 )
 def test_book_word_builder(array, expected):
     assert book_word_builder(array) == expected
+
+
+@pytest.mark.parametrize(
+    "array,expected",
+    [
+        (
+            ["a", "b", "c"],
+            ["abc", "acb", "bac", "bca", "cab", "cba"],
+        )
+    ],
+)
+def test_word_builder_3_chars(array, expected):
+    assert word_builder_3_chars(array) == expected

@@ -8,6 +8,7 @@ containing the following string combinations:
 'ca', 'cb', 'cd', 'da', 'db', 'dc'
 ]
 """
+
 import string
 import time
 
@@ -28,6 +29,18 @@ def book_word_builder(array):
             if i != j:
                 collection.append(array[i] + array[j])
     return collection
+
+
+def word_builder_3_chars(array):
+    words = []
+    for i in range(len(array)):
+        j = 0
+        for j in range(j, len(array)):
+            k = 0
+            for k in range(k, len(array)):
+                if i != j and j != k and i != k:
+                    words.append(array[i] + array[j] + array[k])
+    return words
 
 
 if __name__ == "__main__":
