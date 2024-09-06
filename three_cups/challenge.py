@@ -36,3 +36,21 @@ Output the ﬁnal location of the ball:
 - 2 if the ball is at the middle
 - 3 if the ball is at the right
 """
+
+
+def get_ball_location(swaps):
+    position = "left"
+    for swap in swaps:
+        if swap == "A" and position == "left":
+            position = "middle"
+        elif swap == "A" and position == "middle":
+            position = "left"
+        elif swap == "B" and position == "middle":
+            position = "right"
+        elif swap == "B" and position == "right":
+            position = "middle"
+        elif swap == "C" and position == "left":
+            position = "right"
+        elif swap == "C" and position == "right":
+            position = "left"
+    return position
