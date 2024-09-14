@@ -20,3 +20,4 @@ urwid_readline==0.14
 Pygments==2.18.0
 jedi==0.19.1
 wcwidth==0.2.13
+Flake8-pyproject==1.2.3
